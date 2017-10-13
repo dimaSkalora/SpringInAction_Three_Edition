@@ -4,12 +4,13 @@
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="SpringContext_knights" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/part_1/Head_01/knights.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_01/Head_1_1/knights.xml</file>
         </fileset>
         <fileset id="fileset2" name="Knights Aop" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/Part_1/Head_01/knights-aop.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_01/Head_1_1/knights-aop.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Head_02_Springidol Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_02/springidol-context.xml</file>
         </fileset>
       </configuration>
     </facet>
