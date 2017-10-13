@@ -5,5 +5,8 @@
 	    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Здесь должны находиться объявления компонентов -->
+    
+    <bean id="duke" class="part_1.head_02.com.springinaction.spring_idol.Juggler"/>
+
 
 </beans>
