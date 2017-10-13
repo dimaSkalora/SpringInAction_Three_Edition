@@ -9,8 +9,8 @@
         <module name="SpringInAction_Three_Edition" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="SpringInAction_Three_Edition" target="1.5" />
+    <bytecodeTargetLevel>
+      <module name="SpringInAction_Three_Edition" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
