@@ -38,4 +38,37 @@
     </bean>
     <!--<end id="kenny_bean" />-->
 
+    <!--Внедрение ссылок на другие компоненты-->
+    <!--<start id="saxophone_bean" />-->
+    <bean id="saxophone" class="part_1.head_02.com.springinaction.spring_idol.Saxophone"/>
+    <!--<end id="saxophone_bean" />-->
+
+    <!--<start id="piano_bean" />-->
+    <bean id="piano" class="part_1.head_02.com.springinaction.spring_idol.Piano" />
+    <!--<end id="piano_bean" />-->
+
+    <!--<start id="kenny_saxophone_bean" />-->
+    <bean id="kenny_saxophone" class="part_1.head_02.com.springinaction.spring_idol.Instrumentalist">
+        <property name="song" value="Jingle Bells"/>
+        <property name="instrument" ref="saxophone"/>
+    </bean>
+    <!--<end id="kenny_saxophone_bean" />-->
+
+    <!--<start id="kenny_piano_bean" />-->
+    <bean id="kenny_piano" class="part_1.head_02.com.springinaction.spring_idol.Instrumentalist">
+        <property name="song" value="Jingle Bells"/>
+        <property name="instrument" ref="piano"/>
+    </bean>
+    <!--<end id="kenny_piano_bean" />-->
+
+    <!--<start id="kenny_saxophone2_bean" />-->
+    <bean id="kenny_saxophone2" class="part_1.head_02.com.springinaction.spring_idol.Instrumentalist">
+        <property name="song" value="Jingle Bells"/>
+        <property name="instrument">
+            <bean class = "part_1.head_02.com.springinaction.spring_idol.Saxophone"/>
+        </property>
+    </bean>
+    <!--<end id="kenny_saxophone2_bean" />-->
+
+
 </beans>
