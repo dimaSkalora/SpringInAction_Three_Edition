@@ -78,5 +78,47 @@
           p:instrument-ref = "saxophone" />
     <!--<end id="kenny_saxophone_p_bean" />-->
 
+    <!--Внедрение списков, множеств и массивов-->
+    <!--<start id="hankCollection_bean" />-->
+    <bean id="hankCollection"
+        class="part_1.head_02.com.springinaction.spring_idol.OneManBand_Collection">
+        <property name="instruments">
+            <list>
+                <ref bean="guitar"/>
+                <ref bean="cymbal"/>
+                <ref bean="harmonica"/>
+            </list>
+        </property>
+    </bean>
+    <!--<end id="hankCollection_bean" />-->
+
+    <!--<start id="hankMap_bean" />-->
+    <bean id="hankMap"
+          class="part_1.head_02.com.springinaction.spring_idol.OneManBand_Map">
+        <property name="instruments">
+            <map>
+                <entry key="GUITAR" value-ref="guitar"/>
+                <entry key="CYMBAL" value-ref="cymbal"/>
+                <entry key="HARMONICA" value-ref="harmonica"/>
+            </map>
+        </property>
+    </bean>
+    <!--<end id="hankMap_bean" />-->
+
+    <!--<start id="hankProperties_bean" />-->
+    <bean id="hankProperties" class="part_1.head_02.com.springinaction.spring_idol.OneManBand_Properties">
+        <property name="instruments">
+            <props>
+                <prop key="GUITAR">STRUM STRUM STRUM</prop>
+                <prop key="CYMBAL">CRASH CRASH CRASH</prop>
+                <prop key="HARMONICA">HUM HUM HUM</prop>
+            </props>
+        </property>
+    </bean>
+    <!--<end id="hankProperties_bean" />-->
+
+    <bean id="guitar" class="part_1.head_02.com.springinaction.spring_idol.Guitar"/>
+    <bean id="cymbal" class="part_1.head_02.com.springinaction.spring_idol.Cymbal"/>
+    <bean id="harmonica" class="part_1.head_02.com.springinaction.spring_idol.Harmonica"/>
 
 </beans>
