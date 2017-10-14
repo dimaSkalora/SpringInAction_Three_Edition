@@ -121,4 +121,17 @@
     <bean id="cymbal" class="part_1.head_02.com.springinaction.spring_idol.Cymbal"/>
     <bean id="harmonica" class="part_1.head_02.com.springinaction.spring_idol.Harmonica"/>
 
+    <!--2.3.1. Основы языка выражений SpEL-->
+    <!--<start id="carl_bean" />-->
+    <bean id="carl" class="part_1.head_02.com.springinaction.spring_idol.Instrumentalist">
+        <property name="song" value="#{kenny.song}"/>
+    </bean>
+    <!--<end id="carl_bean" />-->
+
+    <!--<start id="carl_toUpperCase_bean" />-->
+    <bean id="carl_toUpperCase" class="part_1.head_02.com.springinaction.spring_idol.Instrumentalist">
+        <property name="song" value="#{kenny.song?.toUpperCase()}"/>
+    </bean>
+    <!--<end id="carl_toUpperCase_bean" />-->
+
 </beans>
