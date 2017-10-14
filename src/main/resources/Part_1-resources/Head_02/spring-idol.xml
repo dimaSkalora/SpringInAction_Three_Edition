@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Здесь должны находиться объявления компонентов -->
+
+    <!--<start id="duke_bean" />-->
+    <bean id="duke" class="part_1.head_02.com.springinaction.spring_idol.Juggler"/>
+    <!--<end id="duke_bean" />-->
+
+    <!--<start id="sonnet29_bean" />-->
+    <bean id="sonnet29" class="part_1.head_02.com.springinaction.spring_idol.Sonnet29"/>
+    <!--<end id="sonnet29_bean" />-->
+
+    <!--<start id="poeticduke_bean" />-->
+    <bean id="poeticDuke" class="part_1.head_02.com.springinaction.spring_idol.PoeticJuggler">
+        <constructor-arg value="15"/>
+        <constructor-arg ref="sonnet29"/>
+    </bean>
+    <!--<end id="poeticduke_bean" />-->
+
+    <!--Создание компонентов с помощью фабричных методов-->
+    <!--<start id="theStage_bean" />-->
+    <bean id="theStage" class="part_1.head_02.com.springinaction.spring_idol.Stage" factory-method="getInstance"/>
+    <!--<end id="theStage_bean" />-->
+
+</beans>
