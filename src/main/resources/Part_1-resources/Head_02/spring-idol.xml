@@ -26,4 +26,10 @@
     <bean id="theStage" class="part_1.head_02.com.springinaction.spring_idol.Stage" factory-method="getInstance"/>
     <!--<end id="theStage_bean" />-->
 
+    <!--Область действия компонента-->
+    <!--<start id="ticket_bean" />-->
+    <bean id="ticket" class="part_1.head_02.com.springinaction.spring_idol.Ticket" scope="prototype" />
+    <!--<end id="ticket_bean" />-->
+
+
 </beans>
