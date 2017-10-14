@@ -31,5 +31,11 @@
     <bean id="ticket" class="part_1.head_02.com.springinaction.spring_idol.Ticket" scope="prototype" />
     <!--<end id="ticket_bean" />-->
 
+    <!--Внедрение простых значений-->
+    <!--<start id="kenny_bean" />-->
+    <bean id="kenny" class="part_1.head_02.com.springinaction.spring_idol.Instrumentalist">
+        <property name="song" value="Jingle Bells"/>
+    </bean>
+    <!--<end id="kenny_bean" />-->
 
 </beans>
