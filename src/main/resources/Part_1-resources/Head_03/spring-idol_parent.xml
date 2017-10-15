@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Здесь должны находиться объявления компонентов -->
+
+    <!--3.1.1. Абстрактные компоненты-->
+    <bean id="baseSaxophonist" class="part_1.head_03.springinaction.spring_idol.parent.Instrumentalist" abstract="true">
+        <property name="instrument" ref="saxophone"/>
+        <property name="song" value="Jingle Bells"/>
+    </bean>
+
+    <bean id="saxophone" class="part_1.head_03.springinaction.spring_idol.parent.Saxophone"/>
+
+    <bean id="kenny" parent="baseSaxophonist"/>
+    <bean id="david" parent="baseSaxophonist"/>
+
+    <bean id="frank" parent="baseSaxophonist">
+        <property name="song" value="Mary had a little lamb"/>
+    </bean>
+
+
+</beans>
