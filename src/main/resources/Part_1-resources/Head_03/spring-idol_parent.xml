@@ -38,5 +38,20 @@
         <property name="song" value="Somewhere Over the Rainbow" />
     </bean>
 
+    <!--3.2.1. Основы замещения методов-->
+    <bean id="harry"
+          class="part_1.head_03.springinaction.spring_idol.parent.Magician">
+        <property name="magicBox" ref="magicBox" />
+        <property name="magicWords" value="Bippity boppity boo" />
+    </bean>
+    <bean id="magicBox"
+          class="part_1.head_03.springinaction.spring_idol.parent.magic.MagicBoxImpl">
+        <!--Фокус -->
+        <replaced-method name="getContents"
+                         replacer="tigerReplacer"/>
+    </bean>
+
+    <bean id="tigerReplacer" class="part_1.head_03.springinaction.spring_idol.parent.TigerReplacer"/>
+
 
 </beans>
