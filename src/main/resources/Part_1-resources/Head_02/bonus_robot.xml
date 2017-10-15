@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="modelT800" class="part_1.head_02.com.bonus.robot.ModelT800">
+        <property name="nameRobot" value="ModelT800"/>
+        <property name="dance" ref="tango"/>
+        <property name="weapons" ref="pistol"/>
+    </bean>
+
+    <bean id="tango" class="part_1.head_02.com.bonus.dance.Tango">
+        <property name="nameDance" value="Tango"/>
+    </bean>
+
+    <bean id="pistol" class="part_1.head_02.com.bonus.weapon.Pistol">
+        <property name="nameWeapons" value="Pistol"/>
+    </bean>
+
+</beans>

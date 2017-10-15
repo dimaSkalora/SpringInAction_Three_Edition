@@ -15,10 +15,13 @@
         <fileset id="fileset4" name="Spring Idol" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_02/spring-idol.xml</file>
         </fileset>
+        <fileset id="fileset5" name="Bonus_robot" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_02/bonus_robot.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
