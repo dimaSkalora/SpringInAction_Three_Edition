@@ -21,5 +21,22 @@
         <property name="song" value="Mary had a little lamb"/>
     </bean>
 
+    <!--3.1.2. Общие абстрактные свойства-->
+    <bean id="taylor"
+          class="part_1.head_03.springinaction.spring_idol.parent.vocal.Vocalist"
+            parent="basePerformer"/>
+
+    <bean id="stevie"
+          class="part_1.head_03.springinaction.spring_idol.parent.Instrumentalist"
+        parent="basePerformer">
+        <property name="instrument" ref="guitar" />
+    </bean>
+
+    <bean id="guitar" class="part_1.head_03.springinaction.spring_idol.parent.Guitar"/>
+
+    <bean id="basePerformer" abstract="true">
+        <property name="song" value="Somewhere Over the Rainbow" />
+    </bean>
+
 
 </beans>
