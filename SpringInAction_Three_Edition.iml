@@ -19,7 +19,7 @@
           <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_02/bonus_robot.xml</file>
         </fileset>
         <fileset id="fileset6" name="Spring Idol Head_03" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_03/spring-idol.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_03/spring-idol_parent.xml</file>
         </fileset>
       </configuration>
     </facet>

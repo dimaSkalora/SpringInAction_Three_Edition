@@ -53,5 +53,10 @@
 
     <bean id="tigerReplacer" class="part_1.head_03.springinaction.spring_idol.parent.TigerReplacer"/>
 
+    <!--3.2.2. Использование внедрения методов чтения-->
+    <bean id="stiveLookupMethod" class="part_1.head_03.springinaction.spring_idol.parent.Instrumentalist_LookupMethod">
+        <lookup-method name="getInstrument" bean="guitar" />
+        <property name="song" value="Greensleeves" />
+    </bean>
 
 </beans>
