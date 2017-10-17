@@ -21,6 +21,9 @@
         <fileset id="fileset6" name="Spring Idol Head_03" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_03/spring-idol_parent.xml</file>
         </fileset>
+        <fileset id="fileset7" name="Head_04_Spring Idol_annotation" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_04/Annotation/spring-idol_annotation.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
