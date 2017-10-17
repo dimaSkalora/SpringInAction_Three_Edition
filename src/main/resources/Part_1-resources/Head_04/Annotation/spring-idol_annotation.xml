@@ -6,7 +6,16 @@
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <!--Использование аннотации-->
     <context:annotation-config />
+    <!--4.3. Автоматическое определение компонентов-->
+    <context:component-scan
+            base-package="part_1.head_04.annotation.com.springinaction.spring_idol.component_scan">
+        <context:include-filter type="assignable"
+                                expression="part_1.head_04.annotation.com.springinaction.spring_idol.component_scan.Instrument"/>
+        <context:exclude-filter type="annotation"
+                                expression="part_1.head_04.annotation.com.springinaction.spring_idol.component_scan.SkipIt"/>
+    </context:component-scan>
 
     <!-- здесь находятся объявления компонентов -->
 
