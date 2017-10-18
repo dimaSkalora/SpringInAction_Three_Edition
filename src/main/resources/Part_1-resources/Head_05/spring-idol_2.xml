@@ -22,23 +22,23 @@
 
     <!--<start id="audience_aspect" />-->
     <aop:config>
-        <aop:aspect ref="audience"> <!-- Ссылка на компонент audience -->
-
-            <aop:before pointcut=
-                                "execution(* part_1.head_05.aop.com.springinaction.spring_idol.perfomer.Performer.perform(..))"
-                        method="takeSeats" /> <!-- Перед выступлением -->
-            <aop:before pointcut=
-                                "execution(* part_1.head_05.aop.com.springinaction.spring_idol.perfomer.Performer.perform(..))"
-                        method="turnOffCellPhones" /> <!-- Перед выступлением -->
-            <aop:after-returning pointcut=
-                                         "execution(* part_1.head_05.aop.com.springinaction.spring_idol.perfomer.Performer.perform(..))"
-                                 method="applaud" /> <!-- После выступления -->
-            <aop:after-throwing pointcut=
-                                        "execution(* part_1.head_05.aop.com.springinaction.spring_idol.perfomer.Performer.perform(..))"
-                                method="demandRefund" /> <!-- После неудачного выступления -->
+        <aop:aspect ref="audience">
+            <aop:pointcut id="performance" expression=
+                    "execution(*  part_1.head_05.aop.com.springinaction.spring_idol.perfomer.Performer.perform(..))"/> <!-- Определение среза множества точек сопряжения -->
+            <aop:before
+                    pointcut-ref="performance" method="takeSeats" /><!-- Ссылка на именованный срез -->
+            <aop:before
+                    pointcut-ref="performance"  method="turnOffCellPhones" /><!-- Ссылка на именованный срез -->
+            <aop:after-returning
+                    pointcut-ref="performance"  method="applaud" /> <!-- Ссылка на именованный срез -->
+            <aop:after-throwing
+                    pointcut-ref="performance"  method="demandRefund" /><!-- Ссылка на именованный срез -->
         </aop:aspect>
     </aop:config>
     <!--<end id="audience_aspect" />-->
+
+
+
 
     <!--Таблица 5.2. Элементы настройки механизма AOP в Spring  упрощают объявление аспектов, основанных на POJO
     Элемент настройки AOP      Назначение
