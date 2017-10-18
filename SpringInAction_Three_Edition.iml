@@ -33,6 +33,9 @@
         <fileset id="fileset10" name="Head_05_Spring Idol Around" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_05/spring-idol-around.xml</file>
         </fileset>
+        <fileset id="fileset11" name="Head_05_Sneaky Magician" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_05/sneaky-magician.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
