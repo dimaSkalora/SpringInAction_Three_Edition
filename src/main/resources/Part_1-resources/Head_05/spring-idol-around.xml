@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="eddie"
+          class="part_1.head_05.aop.com.springinaction.spring_idol.perfomer.Instrumentalist">
+        <property name="instrument">
+            <bean class="part_1.head_05.aop.com.springinaction.spring_idol.instrument.Guitar" />
+        </property>
+    </bean>
+
+    <!--<start id="audience_bean" />-->
+    <bean id="aroundAudience"
+          class="part_1.head_05.aop.com.springinaction.spring_idol.AroundAudience" />
+    <!--<end id="audience_bean" />-->
+
+    <!--<start id="audience_aspect" />-->
+    <aop:config>
+        <aop:aspect ref="aroundAudience">
+            <aop:pointcut id="performance2" expression=
+                    "execution(* part_1.head_05.aop.com.springinaction.spring_idol.perfomer.Performer.perform(..))"
+            />
+            <!-- Совет, выполняемый и до, и после -->
+            <aop:around
+                    pointcut-ref="performance2"
+                    method="watchPerformance" />
+        </aop:aspect>
+    </aop:config>
+    <!--<end id="audience_aspect" />-->
+
+
+    <!--Таблица 5.2. Элементы настройки механизма AOP в Spring  упрощают объявление аспектов, основанных на POJO
+    Элемент настройки AOP      Назначение
+    <aop:advisor>           Определяет объект-советник
+    <aop:after>             Определяет AOP-совет, выполняемый после вызова
+                            метода (независимо от успешности его завершения)
+    <aop:after-returning>   Определяет AOP-совет, выполняемый после  успешного выполнения метода
+    <aop:after-throwing>    Определяет AOP-совет, выполняемый после возбуждения исключения
+    <aop:around>             Определяет AOP-совет, выполняемый до и после    выполнения метода
+    <aop:aspect>             Определяет аспект
+    <aop:aspectj-autoproxy>  Включает поддержку аспектов, управляемых аннота-
+                              циями, созданными с применением аннотации @AspectJ
+    <aop:before>              Определяет AOP-совет, выполняемый до выполнения метода
+    <aop:config>              Элемент верхнего уровня настройки механизма AOP
+    <aop:declare-parents>     Внедряет в объекты прозрачную реализацию дополнительных интерфейсов
+    <aop:pointcut>             Определяет срез точек сопряжения-->
+</beans>
