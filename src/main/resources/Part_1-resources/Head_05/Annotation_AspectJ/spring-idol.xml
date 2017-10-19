@@ -22,8 +22,8 @@
       class="part_1.head_05.annotation_aspectj.com.springinaction.spring_idol.Audience" />
   <!--<end id="audience_bean" />-->
 
-  <!--<start id="contestant_introducer" />--> 
-
+  <!--<start id="contestant_introducer" />-->
+  <bean class="part_1.head_05.annotation_aspectj.com.springinaction.spring_idol.contestant.ContestantIntroducer" />
   <!--<end id="contestant_introducer" />-->
 
   <!--<start id="aspectj_autoproxy" />--> 
