@@ -45,6 +45,9 @@
         <fileset id="fileset14" name="Head_05_Sneaky Magician2" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_05/Annotation_AspectJ/sneaky-magician.xml</file>
         </fileset>
+        <fileset id="fileset15" name="Head_05_Annotation_Spring Idol Around" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_05/Annotation_AspectJ/spring-idol-around.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
