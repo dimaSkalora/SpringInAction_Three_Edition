@@ -48,6 +48,9 @@
         <fileset id="fileset15" name="Head_05_Annotation_Spring Idol Around" removed="false">
           <file>file://$MODULE_DIR$/src/main/resources/Part_1-resources/Head_05/Annotation_AspectJ/spring-idol-around.xml</file>
         </fileset>
+        <fileset id="fileset16" name="Head_06_Persistence Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/Part_2-resources/Head_06/spitter-persistence-hibernate-template/persistence-context.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
@@ -77,6 +80,14 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.36" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.1.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-orm:4.3.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:4.3.7.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-java8:5.2.11.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-c3p0:4.3.8.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.1.3.GA" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging-annotations:1.2.0.Beta1" level="project" />
+    <orderEntry type="library" name="Maven: com.mchange:c3p0:0.9.2.1" level="project" />
+    <orderEntry type="library" name="Maven: com.mchange:mchange-commons-java:0.2.3.4" level="project" />
     <orderEntry type="library" name="Maven: cglib:cglib-nodep:2.2" level="project" />
   </component>
 </module>
