@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:aop="http://www.springframework.org/schema/aop"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+  <bean id="volunteer" 
+      class="part_1.head_05.annotation_aspectj.com.springinaction.spring_idol.thinker.Volunteer" ></bean>
+  <bean id="magician" 
+      class="part_1.head_05.annotation_aspectj.com.springinaction.spring_idol.mind_reader.Magician" />
+  
+  <!-- <start id="aspectj_autoproxy" /> -->
+    <aop:aspectj-autoproxy />
+  <!-- <end id="aspectj_autoproxy" /> -->
+
+  <!--Таблица 5.2. Элементы настройки механизма AOP в Spring  упрощают объявление аспектов, основанных на POJO
+  Элемент настройки AOP      Назначение
+  <aop:advisor>           Определяет объект-советник
+  <aop:after>             Определяет AOP-совет, выполняемый после вызова
+                          метода (независимо от успешности его завершения)
+  <aop:after-returning>   Определяет AOP-совет, выполняемый после  успешного выполнения метода
+  <aop:after-throwing>    Определяет AOP-совет, выполняемый после возбуждения исключения
+  <aop:around>             Определяет AOP-совет, выполняемый до и после    выполнения метода
+  <aop:aspect>             Определяет аспект
+  <aop:aspectj-autoproxy>  Включает поддержку аспектов, управляемых аннота-
+                            циями, созданными с применением аннотации @AspectJ
+  <aop:before>              Определяет AOP-совет, выполняемый до выполнения метода
+  <aop:config>              Элемент верхнего уровня настройки механизма AOP
+  <aop:declare-parents>     Внедряет в объекты прозрачную реализацию дополнительных интерфейсов
+  <aop:pointcut>             Определяет срез точек сопряжения-->
+
+</beans>
