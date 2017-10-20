@@ -79,10 +79,10 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.3.5.Final</version>
+            <version>5.2.8.Final</version>
         </dependency>
 
-        <dependency>
+            <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-java8</artifactId>
             <version>5.2.11.Final</version>

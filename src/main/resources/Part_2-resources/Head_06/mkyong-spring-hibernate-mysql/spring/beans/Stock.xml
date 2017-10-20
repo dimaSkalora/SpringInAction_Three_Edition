@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <import resource="../database/Hibernate.xml"/>
+
+	<!-- Stock business object -->
+   <bean id="stockBo" class="part_2.head_06.mkyong_spring_hibernate_mysql.com.mkyong.stock.bo.impl.StockBoImpl" >
+   		<property name="stockDao" ref="stockDao" />
+   </bean>
+ 
+   <!-- Stock Data Access Object -->
+   <bean id="stockDao" class="part_2.head_06.mkyong_spring_hibernate_mysql.com.mkyong.stock.dao.impl.StockDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory_mkyong"></property>
+   </bean>
+   
+   		
+</beans>
