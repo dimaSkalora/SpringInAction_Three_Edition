@@ -1,6 +1,7 @@
 package part_test_2.head_06.spitter_persistence_jpa;
 
-import static org.junit.Assert.*;
+public abstract class AbstractSpitterDaoTest {
+/*import static org.junit.Assert.*;
 import static org.springframework.test.jdbc.SimpleJdbcTestUtils.*;
 
 import org.junit.After;
@@ -20,11 +21,11 @@ import com.habuma.spitter.domain.Spitter;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={
-        "classpath:persistence-context.xml", 
+        "classpath:persistence-context.xml",
         "classpath:test-dataSource-context.xml",
         "classpath:test-transaction-context.xml"
         })
-        
+
 @TransactionConfiguration(transactionManager="txMgr", defaultRollback=true)
 @TestExecutionListeners( { DependencyInjectionTestExecutionListener.class, TransactionalTestExecutionListener.class })
 @Transactional
@@ -32,30 +33,30 @@ public abstract class AbstractSpitterDaoTest {
 
   @Autowired
   private SimpleJdbcTemplate jdbcTemplate;
-  
+
   @Autowired
   private SpitterDao dao;
-  
+
   @After
   public void cleanup() {
     deleteFromTables(jdbcTemplate, "spitter");
   }
-  
+
   @Test
   public void shouldCreateRowsAndSetIds() {
-    assertEquals(0, countRowsInTable(jdbcTemplate, "spitter"));    
+    assertEquals(0, countRowsInTable(jdbcTemplate, "spitter"));
     insertASpitter("username", "password", "fullname", "email", false);
-    
+
     assertEquals(1, countRowsInTable(jdbcTemplate, "spitter"));
-    
+
     insertASpitter("username2", "password2", "fullname2", "email2", false);
     assertEquals(2, countRowsInTable(jdbcTemplate, "spitter"));
-  }  
-  
+  }
+
   @Test
   public void shouldBeAbleToFindInsertedSpitter() {
     Spitter spitterIn = insertASpitter("username", "password", "fullname", "email", false);
-    
+
     Spitter spitterOut = dao.getSpitterById(spitterIn.getId());
 
     assertEquals(spitterIn, spitterOut);
@@ -73,3 +74,5 @@ public abstract class AbstractSpitterDaoTest {
     assertNotNull(spitter.getId());
     return spitter;
   }}
+*/
+}
