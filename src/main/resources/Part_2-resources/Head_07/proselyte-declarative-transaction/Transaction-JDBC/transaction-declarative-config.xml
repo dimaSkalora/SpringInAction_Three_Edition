@@ -13,10 +13,10 @@
     <!-- Initialization for data source -->
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/PROSELYTE_TUTORIAL"/>
-        <property name="username" value="root"/>
-        <property name="password" value="226441226441q"/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/spring_in_action_three_edition" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
     </bean>
 
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
@@ -27,7 +27,7 @@
 
     <aop:config>
         <aop:pointcut id="createOperation"
-                      expression="execution(* net.proselyte.transactionsDeclarative.dao.jdbcTemplate.JdbcTemplateDeveloperDaoImpl.create(..))"/>
+                      expression="execution(* part_2.head_07.proselyte_declarative_transaction.transaction_jdbc.net.proselyte.transactionsDeclarative.dao.jdbcTemplate.JdbcTemplateDeveloperDaoImpl.createDeveloper(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="createOperation"/>
     </aop:config>
 
@@ -39,13 +39,13 @@
 
     <!-- Definition for developerJDBCTemplate bean -->
     <bean id="developerJDBCTemplate"
-          class="net.proselyte.transactionsDeclarative.dao.jdbcTemplate.JdbcTemplateDeveloperDaoImpl">
+          class="part_2.head_07.proselyte_declarative_transaction.transaction_jdbc.net.proselyte.transactionsDeclarative.dao.jdbcTemplate.JdbcTemplateDeveloperDaoImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
     <!-- Definition for projectJDBCTemplate bean -->
     <bean id="projectJDBCTemplate"
-          class="net.proselyte.transactionsDeclarative.dao.jdbcTemplate.JdbcTemplateProjectDaoImpl">
+          class="part_2.head_07.proselyte_declarative_transaction.transaction_jdbc.net.proselyte.transactionsDeclarative.dao.jdbcTemplate.JdbcTemplateProjectDaoImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
