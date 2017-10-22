@@ -23,7 +23,7 @@ public class SpringMain {
 		int rand = new Random().nextInt(1000);
 		emp.setId(rand);
 		emp.setName("Pankaj");
-		emp.setRole("Java Developer");
+		emp.setRole("Java DeveloperProselyte");
 		
 		//Create
 		employeeDAO.save(emp);

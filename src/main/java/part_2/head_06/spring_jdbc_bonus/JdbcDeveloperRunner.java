@@ -17,9 +17,9 @@ public class JdbcDeveloperRunner {
                 (JdbcTemplateDeveloperDaoImpl) context.getBean("jdbcTemplateDeveloperDao");
 
         System.out.println("========Creating new records to DB========");
-        jdbcTemplateDeveloperDao.createDeveloper("Proselyte", "Java Developer", 3);
-        jdbcTemplateDeveloperDao.createDeveloper("Petr", "C++ Developer", 2);
-        jdbcTemplateDeveloperDao.createDeveloper("DesignerAsya", "UI Developer", 1);
+        jdbcTemplateDeveloperDao.createDeveloper("Proselyte", "Java DeveloperProselyte", 3);
+        jdbcTemplateDeveloperDao.createDeveloper("Petr", "C++ DeveloperProselyte", 2);
+        jdbcTemplateDeveloperDao.createDeveloper("DesignerAsya", "UI DeveloperProselyte", 1);
 
         System.out.println("========Developers List========");
         List<Developer> developers = jdbcTemplateDeveloperDao.listDevelopers();
@@ -28,7 +28,7 @@ public class JdbcDeveloperRunner {
         }
 
         System.out.println("========Some changes to DB========");
-        jdbcTemplateDeveloperDao.updateDeveloper(33, "DesignerAsya", "UI Developer", 2);
+        jdbcTemplateDeveloperDao.updateDeveloper(33, "DesignerAsya", "UI DeveloperProselyte", 2);
         jdbcTemplateDeveloperDao.removeDeveloper(32);
 
         System.out.println("========Final Developers List========");

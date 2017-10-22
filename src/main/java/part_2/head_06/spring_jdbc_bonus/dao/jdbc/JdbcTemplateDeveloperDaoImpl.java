@@ -23,7 +23,7 @@ public class JdbcTemplateDeveloperDaoImpl implements DeveloperDao {
         String SQL = "INSERT INTO DEVELOPERS (name, specialty, experience) VALUES (?,?,?)";
 
         jdbcTemplate.update(SQL, name, specialty, experience);
-        System.out.println("Developer successfully created.\nName: " + name + ";\nSpecilaty: " +
+        System.out.println("DeveloperProselyte successfully created.\nName: " + name + ";\nSpecilaty: " +
                 specialty + ";\nExperience: " + experience + "\n");
     }
 
@@ -45,13 +45,13 @@ public class JdbcTemplateDeveloperDaoImpl implements DeveloperDao {
     public void removeDeveloper(Integer id) {
         String SQL = "DELETE FROM DEVELOPERS WHERE id = ?";
         jdbcTemplate.update(SQL, id);
-        System.out.println("Developer with id: " + id + " successfully removed");
+        System.out.println("DeveloperProselyte with id: " + id + " successfully removed");
     }
 
     @Override
     public void updateDeveloper(Integer id, String name, String specialty, Integer experience) {
         String SQL = "UPDATE DEVELOPERS SET name = ?, specialty = ?, experience = ? WHERE id = ?";
         jdbcTemplate.update(SQL, name, specialty, experience, id);
-        System.out.println("Developer with id: " + id + " successfully updated.");
+        System.out.println("DeveloperProselyte with id: " + id + " successfully updated.");
     }
 }

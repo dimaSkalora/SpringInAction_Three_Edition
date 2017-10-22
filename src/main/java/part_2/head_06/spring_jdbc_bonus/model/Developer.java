@@ -40,7 +40,7 @@ public class Developer {
 
     @Override
     public String toString() {
-        return "Developer:" + "\n" +
+        return "DeveloperProselyte:" + "\n" +
                 "ID: " + id + "\n" +
                 "Name: " + name + "\n" +
                 "Specialty: " + specialty + "\n" +

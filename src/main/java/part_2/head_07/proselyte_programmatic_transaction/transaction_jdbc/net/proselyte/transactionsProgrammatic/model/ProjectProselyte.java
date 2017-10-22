@@ -32,7 +32,7 @@ public class ProjectProselyte {
     @Override
     public String toString() {
         return "ProjectProselyte:" +
-                "\nDeveloper's Id: " + DeveloperProselyteId +
+                "\nDeveloperProselyte's Id: " + DeveloperProselyteId +
                 "\nProjectProselyte name: " + projectName +
                 "\nCompanyName: " + companyName + "\n";
     }

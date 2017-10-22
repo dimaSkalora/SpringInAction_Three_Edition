@@ -20,8 +20,8 @@ public class ApplicationRunner {
 
 
         System.out.println("======== Creating developer's records ========");
-        developerDao.createDeveloper("Proselyte", "Java Developer", 3);
-        developerDao.createDeveloper("Mike", "C++ Developer", 5);
+        developerDao.createDeveloper("Proselyte", "Java DeveloperProselyte", 3);
+        developerDao.createDeveloper("Mike", "C++ DeveloperProselyte", 5);
 
         System.out.println("======== List of Developers ========");
         List<DeveloperProselyte> developerList = developerDao.listDevelopers();
@@ -33,7 +33,7 @@ public class ApplicationRunner {
         projectDao.createProject(82, "ProselyteTutorial", "Proselyte.net");
         projectDao.createProject(82, "SkybleLib", "SkybleSoft");
 
-        System.out.println("======== Proselyte Developer's Projects ========");
+        System.out.println("======== Proselyte DeveloperProselyte's Projects ========");
         List<ProjectProselyte> projects = developerDao.listDevelopersProjects(82);
         for (ProjectProselyte project : projects) {
             System.out.println(project);
